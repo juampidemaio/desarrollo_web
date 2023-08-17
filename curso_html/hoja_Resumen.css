@@ -1,0 +1,189 @@
+/*UNIVERSAL
+*{
+    color:red esto es para todos los elementos
+}
+ESTILO EN LINEA
+style="color:green"
+
+TIPO
+los de tipo por ejemplo si quiero modificar solo los h2 puedo hacer.
+h2
+{
+    color:red
+}
+
+IMPORTANT
+h2
+{
+    color:red !important
+}
+
+CLASE
+si yo a un elemento de html por ejemplo le pongo una clase lo puedo modificar.
+<h2class="modify"> defensas </h2>
+
+si yo pongo:    
+.modify
+{
+    color:red
+}
+
+con id es #
+por ejemplo en html esta asi:
+<h2 id="karo"> caramelo de chocolate</h2>
+
+y en css es:
+#karo
+{
+    color:red
+}
+
+ATRIBUTO
+otra forma es por ejemplo que este.
+<h2 marlon="sii">first page </h2>
+
+[marlon="sii"]
+{
+    color:red
+}
+de esta formas se puede como si fuese algo especifico
+
+otra forma de cambiar estilos es:por ejemplo
+
+<h2><p>first page</p></h2>
+<h2><b>first page</b></h2>
+<h2>first page</h2>
+h2 p{
+    color:red
+}
+lo que va a hacer aca es cambiar el h2 p nada mas,los demas no.
+con las clases tambien se pueden hacer.
+por ejemplo
+<h2 class="h2-class"><p>first page</p></h2>
+
+.h2-class p {
+    color:red
+}
+
+otra forma de separar es asi mira. con class y todo
+
+<h2 class="h2-class"><p>first page<span> of my life</span></p></h2>
+
+.h2-class p {
+    color:red
+}
+
+.h2-class p span{
+    color:blue
+}
+
+pseudoclase. sirve para cuando con el mouse lo pasas por arriba y se cambie el color
+por ejemplo
+<h2 class="h2-class"><p>first page<span> of my life</span></p></h2>
+
+.h2-class p:hover {
+    color:red
+}
+
+h2:hover{
+    color:red
+}
+####################################################################
+teoria de la especificidad.
+aca importa la jerarquia.por ejemplo
+yo tengo los atributos 
+h2 y pongo uno en rojo y otro en azul, el ultimo que pnga en este caso va a respetar
+la cascada por que se esta hablando de la misma jerarquia ya que es lo mismo.
+pero por ejemplo si estaria el h2 contra una clase de h2 tomat¿ria el color 
+de la clase ya que tiene mas jerarquia.
+LOS NIVELES SON:
+-!IMPORTANT
+-ESTILOS DE LINEA
+-IDENTIFICADORES
+-CLASES
+-PSEUDO-CLASES
+-ATRIBUTOS
+-ELEMENTOS 
+-PSEUDO-ELEMENTOS
+#########################################################################
+METODOLOGIA BEM:
+evitar conflictos a partir de las clases.
+sirve por bloques.
+
+
+<div class="contact-form">
+    <input type="text" class="contact-form__input--active">
+    <input type="text" class="contact-form__input">
+    <input type="text" class="contact-form__input">
+    <input type="text" class="contact-form__input">
+</div>
+
+.contact-form__input--active{
+    color:Red
+}
+esto es para que dentro de ese bloque lo diferencie a este
+
+<div class="contact-form">
+    <p class="contact-form__p">
+        <h2 class="contact-form__p-h2"></h2>
+    </p>
+</div>
+esto seria cuando esta un bloque dentro de otro bloque
+################################################################################
+UNIDADES
+esto ya es la tipografia
+las medidas relativas se usan para todo tipo, por ejemplo haces
+tu pagina y para los que lo ven del celular se les va a 
+adaptar a ellos para que puedan verlo bien 
+
+por default 1em es 16 px
+peeero se pude modificar, por ejemplo si yo el 1er bloque pongo 20 pixeles
+y dentro de ese bloque hay mas bloques si a esos bloques por ejemplo le pongo
+1em ese bloque en vez de valer 16 por em vale 20 por em
+
+por ejemplo:
+.contact-form{
+    font-size:20px
+}
+aca estoy diciendo que todo lo que esta dentro de esta caja valen 20 px
+.contact-form__input--active{
+    font-size:5em
+}
+otra medida relativa es el viewport height y viewport widht
+*{
+    padding:0px;
+    margin:0px;
+}
+
+.contact-form{
+    font-size:25px;
+    background-color: #000;
+    width: 50vw;
+    height: 100vh;
+se puede poner % 
+}
+
+propiedades de la tipografia.
+
+.contact-form{
+    font-size:2em;
+    font-family: Georgia;
+    line-height: 1.9; cuanto ocupa la posicion de la letra digamos
+    font-weight: 400; el grosor de la letra
+    font-stretch: normal;no imp
+    font-variant: small-caps;no imp
+    color:red;
+    con google font nos podemos poner links de tipografias, lo ponemos en el header: 
+    de html
+}
+#########################################################################
+NORMALIZE
+descargarlo es para que se normalice todo
+1.16
+
+
+/*
+
+
+
+
